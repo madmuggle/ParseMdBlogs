@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<%- include("template/commonHead") %>
+	<link rel="stylesheet" href="/css/article.css">
+	<title><%- meta.title %></title>
+</head>
+
+<body>
+	<div class="main">
+		<div class="article">
+			<h1 class="top-title"><%- meta.title %></h1>
+			<div class="article-meta">
+				<div class="article-date"><%- meta.date %></div><!--
+				--><div class="article-tags"><%- meta.tags %></div>
+			</div>
+			<%- parsedArticle %>
+			<%- include("template/footer") %>
+		</div>
+	</div>
+
+	<div class="toolbar">
+		<a href="/">Home</a>
+	</div>
+
+	<%- include("template/commonFn") %>
+</body>
+</html>

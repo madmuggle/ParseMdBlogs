@@ -1,0 +1,30 @@
+@import "config";
+
+.toolbar {
+	position: fixed;
+	left: calc(~"@{offsetBig} + @{indexPageLeftSpace}");
+	bottom: 0;
+	a {
+		display: inline-block;
+		line-height: 2;
+		border-radius: 5px;
+		margin: 2px 0;
+		padding: 0 8px;
+		font-size: 14px;
+		text-align: center;
+		text-decoration: none;
+		outline: none;
+		background-color: @articleTitleColor;
+		color: white;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+@media screen and (max-width: @mainWidthMedia) {
+	.toolbar {
+		left: @offsetSmall;
+	}
+}
+

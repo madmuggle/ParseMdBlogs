@@ -1,0 +1,25 @@
+@import "config";
+
+body {
+	overflow-y: scroll;
+	margin: 0;
+	font-size: @fontSizeNormal;
+}
+
+.main {
+	margin: 60px auto 80px @indexPageLeftSpace;
+	width: @mainWidth;
+	position: relative;
+	a {
+		color: @themeColor;
+		outline: none;
+	}
+}
+
+@media screen and (max-width: @mainWidthMedia) {
+	.main {
+		margin: 60px auto 80px;
+		width: 100%;
+	}
+}
+

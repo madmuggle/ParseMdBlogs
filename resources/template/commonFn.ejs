@@ -1,0 +1,13 @@
+<script>
+(function() {
+
+function adjust(a) {
+	if (/^http/.test(a.getAttribute('href'))) a.target = '_blank';
+}
+
+window.addEventListener('load', function () {
+	Array.from(document.querySelectorAll('a')).forEach(adjust);
+});
+
+})();
+</script>

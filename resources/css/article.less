@@ -1,0 +1,111 @@
+@import "config";
+@import "body";
+@import "toolbar";
+@import "footer";
+@import "iframe";
+@import "meta";
+
+@mainFont: serif;
+
+.article {
+	position: relative;
+	margin: 80px @offsetBig;
+	line-height: 1.7;
+	//color: #333;
+	font-family: @mainFont;
+	//font-weight: 300;
+	//text-align: justify;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: @articleTitleColor;
+		font-family: cursive;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+	h2 {
+		margin-top: 35px;
+		font-size: 20px;
+	}
+	h3 {
+		margin-top: 20px;
+		font-size: 18px;
+	}
+	ul, ol {
+		padding-left: 20px;
+		padding-right: 10px;
+	}
+	li p {
+		margin: 0;
+	}
+	p, blockquote, pre, ul, ol {
+		margin-bottom: @basicGap;
+	}
+	a {
+		color: @themeColor;
+	}
+	blockquote {
+		border-left: 4px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		border-top: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 15px;
+		font-style: italic;
+		color: #333;
+		padding: 10px;
+		p {
+			margin: 0;
+		}
+	}
+	pre {
+		background-color: #f9f9f9;
+		color: #494747;
+		overflow: auto;
+		border: 1px solid #ccc;
+		line-height: 18px;
+		padding: 10px;
+	}
+	pre code {
+		font-family: monospace;
+		text-decoration: none;
+		font-size: @fontSizeNormal - 2px;
+		font-style: normal;
+	}
+	code {
+		font-family: @mainFont;
+		font-size: @fontSizeNormal;
+		font-style: italic;
+		text-decoration: underline;
+	}
+	table {
+		width: 100%;
+	}
+	td {
+		border: 1px solid #ccc;
+	}
+	img {
+		display: block;
+		max-width: 100%;
+		margin: 10px auto 20px;
+	}
+	.top-title {
+		line-height: @titleLineHeight;
+		margin-bottom: 0;
+		border-bottom: 1px solid @metaBackColor;
+		color: @articleTitleColor;
+		font-family: fantasy;
+		font-size: 26px;
+	}
+}
+
+.article-meta {
+	margin: 0 0 50px;
+}
+
+
+@media screen and (max-width: @mainWidthMedia) {
+	.article {
+		margin: 0 @offsetSmall;
+	}
+}

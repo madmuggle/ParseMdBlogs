@@ -1,0 +1,15 @@
+#! /bin/sh
+
+if [ $# -eq 0 ]; then echo "Usage: deploy wwwroot"; exit; fi
+
+rm -rf /tmp/deploy_temp
+cp -r $1 /tmp/deploy_temp
+cd /tmp/deploy_temp
+
+git init
+git add .
+git commit -m "."
+#git push git@github.com:/madmuggle/madmuggle.github.io master --force
+git push git@git.coding.net:/madmuggle/madmuggle.coding.me master --force
+#git push wx@madmuggle.me:~/blogs master --force
+

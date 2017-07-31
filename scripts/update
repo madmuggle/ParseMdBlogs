@@ -1,0 +1,22 @@
+#! /bin/sh
+
+## update the source css and js to the target direcotry
+
+printUsage() {
+	echo "Usage: sh resources/update [outdir]"
+	exit 1;
+}
+
+if [ "${1}"x = ""x ]; then printUsage; fi
+
+RESDIR=`dirname $0`/../resources;
+OUTDIR=$1
+
+lessc $RESDIR/css/index.less > $OUTDIR/css/index.css
+lessc $RESDIR/css/article.less > $OUTDIR/css/article.css
+
+#cp -R $RESDIR/js $OUTDIR
+cp -R $RESDIR/img $OUTDIR
+
+echo Update succeed.
+

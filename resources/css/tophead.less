@@ -1,0 +1,40 @@
+@import "config";
+
+a.toptitle {
+	padding: 80px @indexPageLeftSpace+@offsetBig 0;
+	display: block;
+	border-bottom: 1px solid #ccc;
+	line-height: @titleLineHeight;
+	text-decoration: none;
+	font-family: fantasy;
+	font-size: 26px;
+	font-weight: 900;
+	color: #999;
+}
+
+.indexes {
+	padding: 0 @indexPageLeftSpace+@offsetBig;
+	.user-select();
+	a {
+		font-weight: bold;
+		display: inline-block;
+		width: 30px;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 0 0 6px 6px;
+	}
+	a.active {
+		background-color: #ccc;
+		color: white;
+	}
+	a.negative {
+		background-color: white;
+		color: #eee;
+	}
+	span {
+		font-family: sans-serif;
+		font-size: 10px;
+		color: #aaa;
+	}
+}
+

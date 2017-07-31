@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<%- include("template/commonHead") %>
+	<link rel="stylesheet" href="/css/index.css">
+	<title>Madmuggle's Homepage</title>
+</head>
+
+<body>
+	<div class="tophead">
+		<a class="toptitle" href="/">
+			Madmuggle's blogs for thoughts and daily life
+		</a>
+		<div class="indexes">
+			<% if (pageNum === 0) { %>
+				<a class="negative" href="javascript:void 0;">&lt;&lt;</a>
+			<% } else if (pageNum === 1) { %>
+				<a class="active" href="/">&lt;&lt;</a>
+			<% } else { %>
+				<a class="active" href="<%- `/indexes/${pageNum}.html` %>">
+					&lt;&lt;
+				</a>
+			<% } %>
+			<% if (pageNum === pageCount - 1) { %>
+				<a class="negative" href="javascript: void 0;">&gt;&gt;</a>
+			<% } else { %>
+				<a class="active" href="<%- `/indexes/${pageNum+2}.html` %>">
+					&gt;&gt;
+				</a>
+			<% } %>
+			<span>page <%= pageNum+1 %> of <%= pageCount %></span>
+		</div>
+	</div>
+	<div class="main">
+		<ul class="articles">
+			<% for (var a of articleList) { %>
+				<li>
+					<a class="article-title" href="<%- a.url %>">
+						<%- a.title %>
+					</a>
+					<div class="article-meta">
+						<div class="article-date">
+							<%- a.date %>
+						</div><!--
+						--><div class="article-tags">
+							<%- a.tags %>
+						</div>
+					</div>
+				</li>
+			<% } %>
+		</ul>
+	</div>
+</body>
+
+</html>

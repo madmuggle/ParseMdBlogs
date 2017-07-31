@@ -1,0 +1,14 @@
+{
+	"scripts": {
+		"start": "SRCDIR=~/blogs DESTDIR=/srv/homepage node lib/watch.js",
+		"update": "sh scripts/update /srv/homepage",
+		"deploy": "sh scripts/deploy /srv/homepage"
+	},
+	"dependencies": {
+		"marked": "",
+		"ejs": ""
+	},
+	"devDependencies": {
+		"less": ""
+	}
+}

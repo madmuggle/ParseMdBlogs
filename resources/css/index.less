@@ -1,0 +1,40 @@
+@import "config";
+@import "body";
+@import "toolbar";
+@import "footer";
+@import "utils";
+@import "meta";
+@import "tophead";
+
+
+.articles {
+	margin: 20px @offsetBig;
+	padding: 0;
+	li {
+		margin: 40px 0;
+		list-style: none;
+	}
+}
+
+.article-title {
+	display: block;
+	font-family: fantasy;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: @titleLineHeight;
+	text-decoration: none;
+	border-bottom: 1px solid @metaBackColor;
+}
+
+
+@media screen and (max-width: @mainWidthMedia) {
+	a.toptitle {
+		padding: 80px @offsetSmall 0;
+	}
+	.indexes {
+		padding: 0 @offsetSmall;
+	}
+	.articles {
+		margin: 20px @offsetSmall;
+	}
+}
